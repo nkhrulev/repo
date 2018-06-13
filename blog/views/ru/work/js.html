@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>nicols co</title>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1'/>
+		<meta name='description' content='Разработка нового, доработка и поддержка уже существующего функционала, обучение программированию на всех возможных языках. Как добиваться успеха в программировании, наслаждаясь жизнью, при этом работая не 12 часов, а головой.'/>
+		<meta name='keywords' content='html5, bootstrap, navbar, разработка, angular, dotnet, startup, программирование, администрирование, как сбросить пароль windows 8, как сбросить пароль windows 10, hot to wix error 40, itunes error 4014, itunes error 4013, хайп, блокчейн, биткоин, pivot, mdx, window functions'/>
+		<meta name="google-site-verification" content="Qlu6INt4gikwmVM8uSMy7wEV2NbAcxlL-ZgCuUPrJ-Y" />
+		<meta name="yandex-verification" content="7e246d1d1e188569" />
+		<link rel="shortcut icon" href="../../../../favicon.ico">
+		<link rel="icon" type="image/png" href="../../../../favicon.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="../../../../favicon.png" sizes="32x32">
+		<link href='../../../css/css.css' rel='stylesheet'/>
+		<link href='../../../css/bootstrap.css' rel='stylesheet'/>
+		<script src='../../../js/js.js'></script>
+	</head>
+	<body>
+		<div class='container body-content' id='body-content'>
+			<nav class='navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom'>
+				<button class='navbar-toggler navbar-toggler-right' type='button' onclick='load_nav()' data-toggle='collapse' data-target='.navbar-collapse' aria-controls='navbar-collapse' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>
+				<div>
+					<a class='navbar-brand icon fa-home' href='../../../index.html'></a>
+					<a class='navbar-brand' href='#' onclick='load_lang()'><span class='flag ru' id='flag'>flag ru</span></a>
+				</div>
+				<div class='collapse navbar-collapse' id='navbar-collapse'>
+					<ul class='navbar-nav mr-auto mt-2 mt-md-0'>
+						<li class='nav-item'><a class='nav-link' href='../about.html'>Обо мне</a></li>
+						<li class='nav-item'><a class='nav-link' href='../contact.html'>Контакты</a></li>
+						<li class='nav-item'><a class='nav-link' href='../work.html'>Разработка</a></li>
+						<li class='nav-item'><a class='nav-link' href='../literature.html'>Литература</a></li>
+					</ul>
+					<form class='form-inline my-2 my-lg-0'>
+						<input class='form-control mr-sm-2' type='search' placeholder='Поиск' id='search_text'/>
+						<button class='btn btn-outline-success my-2 my-sm-0' type='button' onclick='search()' id='search_button'>Поиск</button>
+					</form>
+				</div>
+			</nav>
+			
+			<script>comeback();</script>
+			
+			<h3>Не индексировать.</h3>
+				<p>
+					Всем хорошего дня! Сегодня я хотел бы поделиться с вами интересным лайфхаком: а состоит он в следующем. Если вы копируете статьи других людей, поисковые системы считают, что эти статьи не уникальны, поэтому ваш сайт теряет результаты поиска. Чтобы избежать этого фактора, вам просто нужно заключить неуникальный контент в эти теги:
+				</p>
+				<pre>&lt;noindex&gt;Non-unique text from a foreign article.&lt;/noindex&gt;</pre>
+				<script>publish_date();</script>
+				<hr />
+			<h3>Текст под катом.</h3>
+				<p>
+					Как сделать текст под катом ?. Недавно я столкнулся с проблемой скрытия текста под катом. У меня нет флажка «Развернуть шаблоны виджета» в моем блоге, а ссылка «Далее» не работает. Я не знаю, с чем это связано. Поэтому возьмите и напишите свою функцию:
+				</p>
+				<pre>
+&lt;html&gt;
+ &lt;title&gt;&lt;/title&gt;
+  &lt;head&gt;
+   &lt;script&gt;
+	function Cut(i){
+		if (document.getElementById('Div' + i).style.display == 'block'){
+			document.getElementById('A' + i).text = 'Learn More';
+			document.getElementById('Div' + i).style.display = 'none';
+		} else {
+			document.getElementById('A' + i).text = 'Collapse';
+			document.getElementById('Div' + i).style.display = 'block';
+		}
+		return false;
+	}
+   &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+	&lt;a href="javascript:void(0)" id="A0" onclick="Cut(0);"&gt;Learn More&lt;/a&gt;
+	&lt;div id="Div0" style='display: none;'&gt;
+		This is the text under the cut 0...
+	&lt;/div&gt;
+	&lt;a href="javascript:void(0)" id="A1" onclick="Cut(1);"&gt;Learn More&lt;/a&gt;
+	&lt;div id="Div1" style='display: none;'&gt;
+		This is the text under the cut 1...
+	&lt;/div&gt;
+	&lt;!--...--&gt;
+	&lt;a href="javascript:void(0)" id="A1000" onclick="Cut(1000);"&gt;Learn More&lt;/a&gt;
+	&lt;div id="Div1000" style='display: none;'&gt;
+		This is the text under the cut n...
+	&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+				</pre>
+				<script>publish_date();</script>
+				<hr />
+			<h3>Счастливого Нового года.</h3>
+				<pre>
+&lt;div id="t"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+	window.onload = time();
+	function time() {
+		timeend = new Date();
+		timeend = new Date(timeend.getYear() > 1900 ? (timeend.getYear() + 1) : (timeend.getYear() + 1901), 0, 1);
+		today = new Date();
+		today = Math.floor((timeend-today) / 1000);
+		timestr="Before the new " + (new Date().getYear() + 1901) + " year, there are: " + today + " seconds";
+		document.getElementById('t').innerHTML = timestr;
+		window.setTimeout("time()", 1000);
+	}
+&lt;/script&gt;
+				</pre>
+				<div id='timer'><script>hny();</script></div>
+				<script>publish_date();</script>
+				<hr />
+			<h3>Курсы валют онлайн.</h3>
+				<p>Чтобы добавить этот виджет, просто возьмите следующий код:</p>
+				<pre>
+&lt;script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"&gt;
+{
+	"showChart": false,
+	"width": "100%",
+	"height": "200",
+	"tabs": [{
+		"title": "Exchange Rates",
+		"symbols": [
+			{
+				"s": "FX_IDC:EURRUB",
+				"d": "Euro"
+			}, 
+			{
+				"s": "FX_IDC:USDRUB",
+				"d": "Dollar"
+			}
+		]
+	}]
+}
+&lt;/script&gt;
+				</pre>
+				<script>publish_date();</script>
+				<hr />
+			<h3>DataTables: Order cells top.</h3>
+				<p>Пусть есть некоторый набор данных, все данные содержатся в одной таблице (элемент DataTables), поэтому необходимо, чтобы была одна строка заголовков, а другая сумма строк (суммы в строках с числовыми значениями). После нескольких поисков мы решим эту проблему следующим образом. В DataTables добавим <b>orderCellsTop: true</b></p>
+				<pre>
+$('#dataTables').load('url', function(){
+	orderCellsTop: true
+});
+				</pre>
+				<p>В результате сортировка будет выполняться исключительно на 1 строке (по названию таблицы). И сколько бы ни было строк в таблице.</p>
+				<script>publish_date();</script>
+				<hr />
+			<h3>DataTables: Не отображается кнопка Excel.</h3>
+				<p>Если вы не видите кнопку выгрузки в Excel в IE9 и более ранних версиях, вы должны указать следующий метатег:</p>
+				<pre>&lt;meta http-equiv='x-ua-compatible' content='IE=10'&gt;</pre>
+				<p>добавьте его между тегами <b>&lt;head&gt; ... &lt;/head&gt;</b>. По всем вопросам, связанными с документацией по DataTables, вы можете ознакомиться на данном <a href='http://datatables.net' target='_blank'>ресурсе</a>. ся соответствующая информация находится в открытом исходном коде.</p>
+				<script>publish_date();</script>
+				
+				<script>foo();</script>
+		</div>
+	</body>
+</html>

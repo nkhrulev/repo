@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>nicols co</title>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1'/>
+		<meta name='description' content='Разработка нового, доработка и поддержка уже существующего функционала, обучение программированию на всех возможных языках. Как добиваться успеха в программировании, наслаждаясь жизнью, при этом работая не 12 часов, а головой.'/>
+		<meta name='keywords' content='html5, bootstrap, navbar, разработка, angular, dotnet, startup, программирование, администрирование, как сбросить пароль windows 8, как сбросить пароль windows 10, hot to wix error 40, itunes error 4014, itunes error 4013, хайп, блокчейн, биткоин, pivot, mdx, window functions'/>
+		<meta name="google-site-verification" content="Qlu6INt4gikwmVM8uSMy7wEV2NbAcxlL-ZgCuUPrJ-Y" />
+		<meta name="yandex-verification" content="7e246d1d1e188569" />
+		<link rel="shortcut icon" href="../../../../favicon.ico">
+		<link rel="icon" type="image/png" href="../../../../favicon.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="../../../../favicon.png" sizes="32x32">
+		<link href='../../../css/css.css' rel='stylesheet'/>
+		<link href='../../../css/bootstrap.css' rel='stylesheet'/>
+		<script src='../../../js/js.js'></script>
+	</head>
+	<body>
+		<div class='container body-content' id='body-content'>
+			<nav class='navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom'>
+				<button class='navbar-toggler navbar-toggler-right' type='button' onclick='load_nav()' data-toggle='collapse' data-target='.navbar-collapse' aria-controls='navbar-collapse' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>
+				<div>
+					<a class='navbar-brand icon fa-home' href='../../../index.html'></a>
+					<a class='navbar-brand' href='#' onclick='load_lang()'><span class='flag en' id='flag'>flag en</span></a>
+				</div>
+				<div class='collapse navbar-collapse' id='navbar-collapse'>
+					<ul class='navbar-nav mr-auto mt-2 mt-md-0'>
+						<li class='nav-item'><a class='nav-link' href='../about.html'>About</a></li>
+						<li class='nav-item'><a class='nav-link' href='../contact.html'>Contact</a></li>
+						<li class='nav-item'><a class='nav-link' href='../work.html'>Working out</a></li>
+						<li class='nav-item'><a class='nav-link' href='../literature.html'>Literature</a></li>
+					</ul>
+					<form class='form-inline my-2 my-lg-0'>
+						<input class='form-control mr-sm-2' type='search' placeholder='Search' id='search_text'/>
+						<button class='btn btn-outline-success my-2 my-sm-0' type='button' onclick='search()' id='search_button'>Search</button>
+					</form>
+				</div>
+			</nav>
+			
+			<script>comeback();</script>
+			
+			<h3>Optimization control.</h3>
+				<p>Digging into their sources, I found the following lines:</p>
+					<pre>
+Dim i As Integer
+TabRole.SelectedTab.Controls.Add(DGRole)
+DGRole.DataSource = Nothing
+If DGRole.ColumnCount > 0 Then DGRole.Columns.RemoveAt(0)
+Linq =  From rName In db.viewRoleFamilyAll
+	Where rName.pref = TabRole.SelectedTab.Text
+	Order By rName.RoleName
+	Select New With {.Role = rName.RoleName, .Description = rName.Description, rName.Select}
+DGRole.DataSource = Linq
+TabRole.Visible = True
+DGRole.Columns().Add(New DataGridViewCheckBoxColumn)
+DGRole.Columns(2).HeaderText = "Select"
+DGRole.Columns(2).Width = 46
+DGRole.Width = TabRole.Width - 15
+If SelectUser <> "" Then
+	For Each item In Linq
+		GetValue = cmd.GFTRS(TabRole.SelectedTab.Text & ".dbo.familyRole", "count(*)", "RoleName = '" & item.Role & "' and Users like '%" & SelectUser & "%'")
+		If GetValue = "1" Then DGRole(2, i).Value = True
+		i += 1
+	Next
+End If
+					</pre>
+					<p>Looking at them, I was a little horrified and decided to rewrite them in order to improve the program's performance. Here's what I got as a result:</p>
+						<pre>
+TabRole.SelectedTab.Controls.Add(DGRole)
+DGRole.DataSource = Nothing
+If DGRole.ColumnCount > 0 Then DGRole.Columns.RemoveAt(0)
+Linq = (From rName In db.sp_CheckRole(SelectUser, TabRole.SelectedTab.Text)
+	Order By rName.Role
+	Select New With {rName.Role, rName.Description, .Select = CBool(rName.Select)}).ToList()
+DGRole.DataSource = Linq
+
+TabRole.Visible = True
+						</pre>
+					<p>Productivity increased by 70%.</p>
+					<p>Conclusion: always refactor your old code.</p>
+					<script>publish_date();</script>
+			
+			<script>foo();</script>
+		</div>
+	</body>
+</html>
