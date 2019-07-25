@@ -3,5 +3,10 @@
 		"id": 4,
 		"title": "The Intelligent Investor",
 		"rating": 3.2
+	},
+	{
+		"id": 5,
+		"title": "The Investor Test Book",
+		"rating": 3.7
 	}
 ]
