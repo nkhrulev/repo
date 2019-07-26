@@ -1,0 +1,7 @@
+[
+	{ "id": 1, "title": "The First Book", "rating": 4.7 },
+  { "id": 2, "title": "The Intelligent Investor", "rating": 3.2 },
+  { "id": 3, "title": "The Second Title Book", "rating": 1.7 },
+  { "id": 4, "title": "The Best Book", "rating": 4.9 },
+  { "id": 5, "title": "No Title", "rating": 1.5 }
+]
